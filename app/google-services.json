@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "109964345425",
+    "project_id": "remoteclinic-c8f37",
+    "storage_bucket": "remoteclinic-c8f37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109964345425:android:9223e708cb5857209e7870",
+        "android_client_info": {
+          "package_name": "com.example.remoteclinic_firstdraft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109964345425-0rmvmi8kkc22o31v1uqcq0lcsjnol2de.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeLI9JNqwyE8mlymbajK0JS_jy73nDw9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109964345425-0rmvmi8kkc22o31v1uqcq0lcsjnol2de.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

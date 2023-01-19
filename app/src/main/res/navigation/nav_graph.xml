@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.remoteclinic_firstdraft.view.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_signPage"
+            app:destination="@id/signPage" />
+        <action
+            android:id="@+id/action_homePage_to_doctorPage"
+            app:destination="@id/doctorPage" />
+        <action
+            android:id="@+id/action_homePage_to_patientPage"
+            app:destination="@id/patientPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/signPage"
+        android:name="com.example.remoteclinic_firstdraft.view.SignPage"
+        android:label="fragment_sign_page"
+        tools:layout="@layout/fragment_sign_page" >
+        <action
+            android:id="@+id/action_signPage_to_signUpPage"
+            app:destination="@id/signUpPage" />
+        <action
+            android:id="@+id/action_signPage_to_patientPage"
+            app:destination="@id/patientPage" />
+        <action
+            android:id="@+id/action_signPage_to_doctorPage"
+            app:destination="@id/doctorPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPage"
+        android:name="com.example.remoteclinic_firstdraft.view.SignUpPage"
+        android:label="fragment_sign_up_page"
+        tools:layout="@layout/fragment_sign_up_page" >
+        <action
+            android:id="@+id/action_signUpPage_to_doctorPage"
+            app:destination="@id/doctorPage" />
+        <action
+            android:id="@+id/action_signUpPage_to_patientPage"
+            app:destination="@id/patientPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientPage"
+        android:name="com.example.remoteclinic_firstdraft.view.PatientPage"
+        android:label="fragment_patient_page"
+        tools:layout="@layout/fragment_patient_page" >
+        <action
+            android:id="@+id/action_patientPage_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_patientPage_to_consultingHistory"
+            app:destination="@id/consultingHistory" />
+        <action
+            android:id="@+id/action_patientPage_to_treatmentDetails"
+            app:destination="@id/treatmentDetails" />
+        <action
+            android:id="@+id/action_patientPage_to_consultingPage"
+            app:destination="@id/consultingPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorPage"
+        android:name="com.example.remoteclinic_firstdraft.view.DoctorPage"
+        android:label="fragment_doctor_page"
+        tools:layout="@layout/fragment_doctor_page" >
+        <action
+            android:id="@+id/action_doctorPage_to_prescription"
+            app:destination="@id/prescription" />
+        <action
+            android:id="@+id/action_doctorPage_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/consultingHistory"
+        android:name="com.example.remoteclinic_firstdraft.view.ConsultingHistory"
+        android:label="fragment_consulting_history"
+        tools:layout="@layout/fragment_consulting_history" >
+        <action
+            android:id="@+id/action_consultingHistory_to_consultingPage"
+            app:destination="@id/consultingPage" />
+        <action
+            android:id="@+id/action_consultingHistory_to_consultationDetail"
+            app:destination="@id/consultationDetail" />
+        <action
+            android:id="@+id/action_consultingHistory_to_patientPage"
+            app:destination="@id/patientPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/consultingPage"
+        android:name="com.example.remoteclinic_firstdraft.view.ConsultingPage"
+        android:label="fragment_consulting_page"
+        tools:layout="@layout/fragment_consulting_page" >
+        <action
+            android:id="@+id/action_consultingPage_to_consultingHistory"
+            app:destination="@id/consultingHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/treatmentDetails"
+        android:name="com.example.remoteclinic_firstdraft.view.TreatmentDetails"
+        android:label="fragment_treatment_details"
+        tools:layout="@layout/fragment_treatment_details" />
+    <fragment
+        android:id="@+id/prescription"
+        android:name="com.example.remoteclinic_firstdraft.view.Prescription"
+        android:label="fragment_prescription"
+        tools:layout="@layout/fragment_prescription" >
+        <action
+            android:id="@+id/action_prescription_to_doctorPage"
+            app:destination="@id/doctorPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/consultationDetail"
+        android:name="com.example.remoteclinic_firstdraft.ConsultationDetail"
+        android:label="fragment_consultation_detail"
+        tools:layout="@layout/fragment_consultation_detail" >
+        <action
+            android:id="@+id/action_consultationDetail_to_consultingHistory"
+            app:destination="@id/consultingHistory" />
+    </fragment>
+</navigation>

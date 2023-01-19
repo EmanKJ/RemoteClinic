@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Virtual Clinic</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro_text">We care about your health</string>
+    <string-array name="Specialization_items">
+        <item> Respiratory system</item>
+        <item> Thoracic </item>
+        <item> Chest Diseases and Allergies</item>
+        <item> Allergy and immunology</item>
+        <item>Anesthesiology</item>
+        <item>Dermatology</item>
+        <item>Diagnostic radiology</item>
+        <item> Emergency medicine</item>
+        <item> Family medicine</item>
+        <item> Internal medicine</item>
+        <item> Medical genetics</item>
+        <item>Neurology</item>
+        <item> Nuclear medicine</item>
+        <item> Obstetrics and gynecology</item>
+        <item> Ophthalmology</item>
+        <item>Pathology</item>
+        <item>Pediatrics</item>
+        <item> Physical medicine and rehabilitation</item>
+        <item>Preventive medicine</item>
+    </string-array>
+    <string-array name="gpa_items">
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+
+</resources>

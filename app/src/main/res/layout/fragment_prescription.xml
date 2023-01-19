@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.Prescription">
+
+
+    <TextView
+        android:layout_margin="22dp"
+        android:id="@+id/pIdTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient ID:"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingLeft="8dp"
+        />
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pIdTv"
+        >
+    <TextView
+        android:layout_margin="22dp"
+        android:id="@+id/Tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Symptoms"
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingLeft="8dp"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/symptomsTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:textSize="18dp"
+                android:text="Here the symptoms should appear"
+
+                />
+        </LinearLayout>
+    </ScrollView>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:id="@+id/layoutD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout3"
+        >
+        <TextView
+            android:layout_margin="22dp"
+            android:id="@+id/Tv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diagnosis"
+            android:textColor="@color/teal_700"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:paddingLeft="8dp"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/dignosisEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:textSize="18dp"
+                    android:hint="Please write your diagnosis here"
+
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutD"
+        >
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_width="0dp"
+            android:paddingLeft="8dp"
+            android:text="Medicine"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/table_item_design"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:text="Does"
+            android:textColor="@color/black"
+            android:background="@drawable/table_item_design"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:text="Repeat"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/table_item_design"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="Duration"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/table_item_design"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/medicineRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        />
+    <Button
+
+        android:id="@+id/addMedBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Add Medicine"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/medicineRv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sendPrescBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/teal_700"
+        android:text="Send"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintTop_toBottomOf="@id/addMedBt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
